@@ -1,0 +1,2 @@
+export const GETUSERDATA = "GETUSERDATA"
+export const ADDUSERDATA = "ADDUSERDATA"

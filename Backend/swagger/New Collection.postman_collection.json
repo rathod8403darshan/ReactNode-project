@@ -1,0 +1,152 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "New Collection",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/user": {
+      "get": {
+        "tags": [
+          "GetData"
+        ],
+        "summary": "GetData",
+        "operationId": "GetData",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "GetData"
+        ],
+        "summary": "AddData",
+        "operationId": "AddData",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "name",
+                  "email",
+                  "password",
+                  "image"
+                ],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Rathod"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "Rathod@gmail.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "Golu@001"
+                  },
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+	  
+    },
+    "/user/664c8637331472e53eecda6d": {
+      "delete": {
+        "tags": [
+          "GetData"
+        ],
+        "summary": "deleteData",
+        "operationId": "deleteData",
+        "parameters": [ {
+			"name": "search",
+			"in": "formdata",
+			"description": "Enter Id",
+			"required": true,
+			"schema": {
+			  "type": "string"
+			}
+		  }],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/user/664c8a85257aaa344194f526": {
+      "patch": {
+        "tags": [
+          "GetData"
+        ],
+        "summary": "UpdateData",
+        "operationId": "UpdateData",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "name"
+                ],
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "DarshanKIng"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GetData",
+      "description": ""
+    }
+  ]
+}
